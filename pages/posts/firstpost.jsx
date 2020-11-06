@@ -9,14 +9,9 @@ const firstPost = () => {
   return (
     <Layout>
       <Head>
-        <title>First Post</title>
+        <title>Marley's Blog</title>
       </Head>
       <h1>First Post</h1>
-      <h2>
-        <Link href="/">
-          <a>Back to home</a>
-        </Link>
-      </h2>
     </Layout>
   );
 };
