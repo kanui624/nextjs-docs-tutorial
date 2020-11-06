@@ -1,9 +1,13 @@
+// Next
 import Link from 'next/link';
 import Head from 'next/head';
 
+// Components
+import Layout from '../../components/Layouts';
+
 const firstPost = () => {
   return (
-    <>
+    <Layout>
       <Head>
         <title>First Post</title>
       </Head>
@@ -13,7 +17,7 @@ const firstPost = () => {
           <a>Back to home</a>
         </Link>
       </h2>
-    </>
+    </Layout>
   );
 };
 
