@@ -1,6 +1,6 @@
 // Components
 import Head from 'next/head';
-import Layouts, { siteTitle } from '../components/Layouts';
+import Layout, { siteTitle } from '../components/Layout';
 
 // CSS
 import utilStyles from '../styles/utils.module.css';
@@ -9,7 +9,7 @@ import { getSortedPostsData } from '../lib/posts';
 
 const Home = ({ allPostsData }) => {
   return (
-    <Layouts home>
+    <Layout home>
       <Head>…</Head>
       <section className={utilStyles.headingMd}>…</section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
@@ -26,7 +26,7 @@ const Home = ({ allPostsData }) => {
           ))}
         </ul>
       </section>
-    </Layouts>
+    </Layout>
   );
 };
 
