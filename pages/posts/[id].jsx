@@ -3,6 +3,7 @@ import Head from 'next/head';
 
 // Components
 import Layout from '../../components/Layout';
+import Date from '../../components/Date';
 
 // Util Functions
 import { getAllPostIds, getPostData } from '../../lib/posts';
@@ -18,7 +19,7 @@ const Post = ({ postData }) => {
       <br />
       {id}
       <br />
-      {date}
+      <Date dateString={date} />
       <br />
       <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
     </Layout>
