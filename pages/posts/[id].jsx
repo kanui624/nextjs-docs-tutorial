@@ -5,7 +5,7 @@ import Layout from '../../components/layout';
 import { getAllPostIds } from '../../lib/posts';
 
 const Post = () => {
-  return <Layout>...</Layout>;
+  return <Layout></Layout>;
 };
 
 export const getStaticPaths = async () => {
