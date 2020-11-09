@@ -1,3 +1,6 @@
+// Next Components
+import Head from 'next/head';
+
 // Components
 import Layout from '../../components/Layout';
 
@@ -8,6 +11,9 @@ const Post = ({ postData }) => {
   const { title, id, date } = postData;
   return (
     <Layout>
+      <Head>
+        <title>{title}</title>
+      </Head>
       {title}
       <br />
       {id}
