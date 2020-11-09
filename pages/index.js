@@ -30,13 +30,13 @@ const Home = ({ allPostsData }) => {
   );
 };
 
-export async function getStaticProps() {
+export const getStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
 export default Home;
