@@ -1,5 +1,5 @@
 ---
-title: 'Two Forms of Pre-rendering Yuh'
+title: 'Two Forms of Pre-rendering Pre-Typescript'
 date: '2020-01-01'
 ---
 
