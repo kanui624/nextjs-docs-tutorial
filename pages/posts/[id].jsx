@@ -8,20 +8,23 @@ import Date from '../../components/Date';
 // Util Functions
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
+// CSS
+import utilStyles from '../../styles/utils.module.css';
+
 const Post = ({ postData }) => {
-  const { title, id, date } = postData;
+  const { title, contentHtml, date } = postData;
   return (
     <Layout>
       <Head>
         <title>{title}</title>
       </Head>
-      {title}
-      <br />
-      {id}
-      <br />
-      <Date dateString={date} />
-      <br />
-      <div dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
+      <article>
+        <h1 className={utilStyles.headingXl}>{title}</h1>
+        <div className={utilStyles.lightText}>
+          <Date dateString={date} />
+        </div>
+        <div dangerouslySetInnerHTML={{ __html: contentHtml }} />
+      </article>
     </Layout>
   );
 };
