@@ -1,11 +1,20 @@
 // Components
-import Layout from '../../components/layout';
+import Layouts from '../../components/Layouts';
 
 // Util Functions
-import { getAllPostIds } from '../../lib/posts';
+import { getAllPostIds, getPostData } from '../../lib/posts';
 
-const Post = () => {
-  return <Layout></Layout>;
+const Post = ({ postData }) => {
+  const { title, id, date } = postData;
+  return (
+    <Layouts>
+      {title}
+      <br />
+      {id}
+      <br />
+      {date}
+    </Layouts>
+  );
 };
 
 export const getStaticPaths = async () => {
@@ -13,6 +22,15 @@ export const getStaticPaths = async () => {
   return {
     paths,
     fallback: false,
+  };
+};
+
+export const getStaticProps = async ({ params }) => {
+  const postData = getPostData(params.id);
+  return {
+    props: {
+      postData,
+    },
   };
 };
 
